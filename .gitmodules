@@ -1,0 +1,3 @@
+[submodule "CubicVR.js"]
+      path = CubicVR.js
+      url = https://github.com/cjcliffe/CubicVR.js.git
