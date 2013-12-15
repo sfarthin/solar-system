@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Solar System VSOP Test</title>
+		
+		<style>
+		.timer {
+			z-index:1000;
+			position:absolute;
+			top:0px;
+			right:0px;
+			color: white;
+			width: 148px;
+		}
+		
+		.timer div {
+			position: relative;
+			top: 2px;
+		}
+		
+		.timer input {
+			width: 100px;
+			color: black;
+		}
+		
+		.position {
+			z-index:1000;
+			position:absolute;
+			bottom:0px;
+			right:0px;
+			color: white;
+		}
+		
+		.e_position {
+			z-index:1000;
+			position:absolute;
+			bottom:0px;
+			left:0px;
+			color: white;
+		}
+		
+		.scale {
+			z-index:1000;
+			position:absolute;
+			top:0px;
+			left:0px;
+			color: white;
+			width: 248px;
+		}
+		
+		.scale input {
+			width:40px;
+		}
+		
+		.time {
+			z-index:1000;
+			position:absolute;
+			top:0px;
+			left:50%;
+			color: white;
+			width: 500px;
+			margin-left: -250px;
+			text-align:center;
+			background-color: white;
+			color: black;
+			padding: 3px;
+		}
+		
+		.time span {
+			position: relative;
+			top: -2px;
+		}
+		
+		.time input {
+			width: 400px;
+			position: relative;
+			top: 2px;
+		}
+		
+		.camera {
+			position: absolute;
+			left: 50%;
+			bottom: 0px;
+			color: white;
+			width: 300px;
+			margin-left: -150px;
+			z-index: 1000;
+		}
+		
+		.camera label {
+			cursor: pointer;
+		}
+		
+		</style>
+
+		<script src="CubicVR.js/CubicVR.js" type="text/javascript"></script>
+        <script data-main="js/main" src="js/libs/require.js"></script>
+    </head>
+    <body>
+		<div class="timer"><div>Date: </div><input type="text" class="timer" /></div>
+		<div class="position">Camera position:<br />X: <span class="x"></span> <br />Y: <span class="y"></span><br /> Z: <span class="z"></span></div>
+		<div class="e_position">Earth position:<br />X: <span class="x"></span> <br />Y: <span class="y"></span><br /> Z: <span class="z"></span></div>
+		<div class="scale">Planets scale: <input type="number" value="75" step="10">x</div>
+		
+		<div class="time"><span>Time: </span><input type="range" value="2" min="-3" max="3"></div>
+		
+		<div class="camera">
+			<span>Camera: </span>
+			<br /> <input type="radio" name="camera" value="1" id="c1" checked> <label for="c1">Outside Mar's orbit looking towards sun</label>
+			<br /> <input type="radio" name="camera" value="2" id="c2"> <label for="c2">On Earth always facing towards the sun</label>
+			<br /> <input type="radio" name="camera" value="3" id="c3"> <label for="c3">On Mars always facing towards the sun</label>
+			<br /> <input type="radio" name="camera" value="4" id="c4"> <label for="c4">On Sun looking into space</label>
+		</div>
+		
+	</body>
+</html>
